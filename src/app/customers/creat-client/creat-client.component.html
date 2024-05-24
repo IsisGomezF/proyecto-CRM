@@ -1,0 +1,41 @@
+<h1>Creacion de clientes</h1>
+<br>
+<form>
+  <div class="row">
+    <div class="col mb-3">
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Tipo de documento</option>
+        <option value="1">Cedula</option>
+        <option value="2">Nit</option>
+        <option value="3">Pasaporte</option>
+        <option value="4">Cedula de extranjería</option>
+      </select>
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Numero de documento" aria-label="Last name">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" >Razon social</label>
+    <input type="text" class="form-control" placeholder="Razon social" id="exampleInputPassword1">
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <label for="direccion" class="form-label" >Direción</label>
+      <input id="direccion" type="text" class="form-control" placeholder="Direccion" aria-label="First name">
+    </div>
+    <div class="col">
+      <label for="telefono" class="form-label" >Telefono</label>
+      <input id="telefono" type="text" class="form-control" placeholder="Telefono" aria-label="Last name">
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" >Contacto</label>
+    <input type="password" class="form-control" placeholder="Nombre persona de contacto" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

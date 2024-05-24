@@ -1,0 +1,28 @@
+<div class="container-fluid px-0 menu">
+  <div class="row">
+    <div class="bg-secondary-subtle text-secondary-emphasis col-lg-2 col-md-2 col-sm-12 min-vh-100 ">
+      <ul class="nav flex-column mt-4 list-unstyled">
+        @for(page of menuInternalPages; track $index){
+        <li class="nav-item fs-4">
+          <a
+            [routerLink]="page.path"
+            class="nav-link"
+            aria-current="page"
+          >
+          <i [class]="page.icon"></i>
+            {{ page.tittle }}
+          </a>
+        </li>
+        }
+        <li >
+          Se hubiera podido reusar menu...teniendo en cuenta los path
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
