@@ -6,5 +6,6 @@ export enum PATH {
 }
 
 export enum PATHOPORTUNITIES{
-  CREATEOPORTUNITY="oportunity"
+  CREATEOPORTUNITY="oportunity",
+  VIEWOPORTUNITIES = "viewOportunity"
 }

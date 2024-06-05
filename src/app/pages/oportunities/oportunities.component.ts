@@ -23,12 +23,12 @@ export class OportunitiesComponent implements OnInit{
         icon: "fa-solid fa-plus",
         subMenu: []
       },
-      // {
-      //   path: PATHCUSTOMERS.GETCUSTOMER,
-      //   tittle: "Ver Clientes",
-      //   icon:"fa-solid fa-magnifying-glass",
-      //   subMenu: []
-      // },
+      {
+        path: PATHOPORTUNITIES.VIEWOPORTUNITIES ,
+        tittle: "Ver oportunidades",
+        icon:"fa-solid fa-magnifying-glass",
+        subMenu: []
+      },
       // {
       //   path: PATHCUSTOMERS.UPDATECUSTOMER,
       //   tittle: "Actualizar Cliente",

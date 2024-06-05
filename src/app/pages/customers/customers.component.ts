@@ -6,13 +6,14 @@ import { MenuInterface } from '../../core/interfaces/menu.interface';
 import { PATHCUSTOMERS } from '../../core/enum/customers.path.enum';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { MenusComponent } from "../../shared/menus/menus.component";
 
 @Component({
     selector: 'app-customers',
     standalone: true,
     templateUrl: './customers.component.html',
     styleUrl: './customers.component.css',
-    imports: [MenuComponent, MenuInternoComponent, CreatClientComponent, CommonModule, RouterOutlet]
+    imports: [MenuComponent, MenuInternoComponent, CreatClientComponent, CommonModule, RouterOutlet, MenusComponent]
 })
 export class CustomersComponent implements OnInit {
   submenuCustomerPage: MenuInterface[]=[]
@@ -26,15 +27,21 @@ export class CustomersComponent implements OnInit {
             subMenu: []
           },
           {
+            path: PATHCUSTOMERS.UPDATECUSTOMER,
+            tittle: "Actualizar Cliente",
+            icon:"fa-solid fa-pen-to-square",
+            subMenu: []
+          },
+          {
             path: PATHCUSTOMERS.GETCUSTOMER,
-            tittle: "Ver Clientes",
+            tittle: "Ver Cliente",
             icon:"fa-solid fa-magnifying-glass",
             subMenu: []
           },
           {
-            path: PATHCUSTOMERS.UPDATECUSTOMER,
-            tittle: "Actualizar Cliente",
-            icon:"fa-solid fa-pen-to-square",
+            path: PATHCUSTOMERS.INTERACTION,
+            tittle: "Crear Interacción",
+            icon:"fa-solid fa-tty",
             subMenu: []
           },
     ]

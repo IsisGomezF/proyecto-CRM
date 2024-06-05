@@ -1,4 +1,3 @@
-import { PATHCUSTOMERS } from './../../core/enum/customers.path.enum';
 import { Component, Input, OnInit } from '@angular/core';
 import { MenuInterface } from "../../core/interfaces/menu.interface";
 import { RouterLink } from '@angular/router';
