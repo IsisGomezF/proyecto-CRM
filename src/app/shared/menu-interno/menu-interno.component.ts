@@ -13,6 +13,6 @@ export class MenuInternoComponent implements OnInit{
   @Input() menuInternalPages: MenuInterface[]=[]
 
   ngOnInit(): void {
-  // console.log(this.menuInternalPages);
+  console.log("menu interno",this.menuInternalPages);
   }
 }

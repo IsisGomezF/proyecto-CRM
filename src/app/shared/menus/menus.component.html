@@ -1,11 +1,15 @@
 <!--Main Navigation-->
 <header>
   <!-- Sidebar -->
-  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+  <nav class="collapse d-lg-block sidebar collapse bg-white">
     <div class="position-sticky">
       <div class="list-group list-group-flush mx-3 mt-4">
         @for(page of menuInternalPages; track $index){
-        <a [routerLink]="page.path" class="list-group-item list-group-item-action py-2 ripple" aria-current="page">
+        <a
+          [routerLink]="page.path"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="page"
+        >
           <i [class]="page.icon"></i>
           {{ page.tittle }}
         </a>
@@ -114,7 +118,7 @@
           autocomplete="off"
           type="search"
           class="form-control rounded"
-          placeholder='Search (ctrl + "/" to focus)'
+          placeholder="Search"
           style="min-width: 225px"
         />
         <span class="input-group-text border-0"
@@ -229,6 +233,75 @@
           </ul>
         </li> -->
 
+        <!-- modules -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              @for(page of menuPages ; track $index){
+              <li class="nav-item">
+                <a
+                  [routerLink]="page.path"
+                  class="nav-link active"
+                  aria-current="page"
+                  >{{ page.tittle }}</a
+                >
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+
+        <!-- prueba -->
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Modulos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              @for(page of menuPages ; track $index){
+              <li class="nav-item">
+                <a
+                  [routerLink]="page.path"
+                  class="nav-link active"
+                  aria-current="page"
+                  >{{ page.tittle }}</a
+                >
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+        <!-- prueba -->
+
+
         <!-- Avatar -->
         <li class="nav-item dropdown">
           <a
@@ -256,72 +329,7 @@
             <li><a class="dropdown-item" href="#">Logout</a></li>
           </ul>
         </li>
-
-        <!-- vistas -->
-        <li class="dropdown">
-          <button
-            class="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Opciones
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            @for(page of menuPages ; track $index){
-            <li>
-              <a
-                [routerLink]="page.path"
-                class="dropdown-item"
-                aria-current="page"
-                href="#"
-                >{{ page.tittle }}</a
-              >
-            </li>
-            }
-          </ul>
-        </li>
       </ul>
-      <!-- vistas -->
-      <!-- <div>
-        <button
-          class="btn btn-primary"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasScrolling"
-          aria-controls="offcanvasScrolling"
-        >
-          Enable body scrolling
-        </button>
-
-        <div
-          class="offcanvas offcanvas-start"
-          data-bs-scroll="true"
-          data-bs-backdrop="false"
-          tabindex="-1"
-          id="offcanvasScrolling"
-          aria-labelledby="offcanvasScrollingLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
-              Offcanvas with body scrolling
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <p>
-              Try scrolling the rest of the page to see this option in action.
-            </p>
-          </div>
-        </div>
-      </div> -->
-      <!-- vistas -->
-
     </div>
     <!-- Container wrapper -->
   </nav>

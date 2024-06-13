@@ -1,4 +1,14 @@
-<p>oportunities works!</p>
-<app-menu-interno [menuInternalPages]="submenuOportunitiesPage"></app-menu-interno>
 
-<!-- <app-menu></app-menu> -->
+<!-- <app-menu-interno [menuInternalPages]="submenuOportunitiesPage"></app-menu-interno> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <app-menus [menuInternalPages]="submenuOportunitiesPage"></app-menus>
+    </div>
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
